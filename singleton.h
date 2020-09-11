@@ -17,19 +17,25 @@ namespace singleton
         {
             this->st = st;
         }
-        ~Singleton() {
+        ~Singleton()
+        {
             delete &this->st;
         }
         void run()
         {
         }
 
-        Stack* getStack()
+        Stack *getStack()
         {
             return &this->st;
         }
 
-         void pushStack(int number)
+        Singleton &getSingleton()
+        {
+            return *this;
+        }
+
+        void pushStack(int number)
         {
             this->st.push(number);
         }

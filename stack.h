@@ -97,9 +97,10 @@ namespace stack
             return result;
         }
 
-        int maxLength() {
+        int maxLength()
+        {
             this->length = 10;
             return this->length;
         }
     };
-}
+} // namespace stack
